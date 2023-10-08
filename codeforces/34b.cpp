@@ -1,0 +1,46 @@
+#define fucking_fast                 ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fo(i,a,b)			for(int i=a;i<=b;i++)
+#define rfo(i,a,b)			for(int i=a;i>=b;i--)
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define pb push_back
+#define ss second
+#define ff first 
+#define ub upper_bound
+#define lb lower_bound
+typedef vector<int> vi;
+#define dead return 0;
+
+
+int main(){
+    
+    fucking_fast;
+
+    ll a,b;
+    cin>>a>>b;
+
+    int ar[a];
+
+    for(int i=0;i<a;i++){
+        cin>>ar[i];
+    }
+
+    sort(ar, ar+a);
+
+    int count = 0;
+
+    for(int i=0;i<a;i++){
+        
+        if(b>0){
+            if(ar[i]<0){
+                count += abs(ar[i]);
+                b--;       
+            }
+        }
+    }
+    cout<<count<<endl;;
+
+    dead;
+}
